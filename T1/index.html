@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="ProjectEuler">
 <meta property="og:description" content="T1 Multiples of 3 and 5 Solution 要求小于1000的能被3或5整除的数的和 一种暴力的方法即是枚举每个数，假如能被3或5整除，就加入答案">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-25T11:59:48.535Z">
+<meta property="og:updated_time" content="2018-11-25T12:19:03.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="T1 Multiples of 3 and 5">
 <meta name="twitter:description" content="T1 Multiples of 3 and 5 Solution 要求小于1000的能被3或5整除的数的和 一种暴力的方法即是枚举每个数，假如能被3或5整除，就加入答案">
@@ -319,7 +319,7 @@
                 
               
 
-              <time title="Created: 2018-11-25 17:40:45 / Modified: 19:59:48" itemprop="dateCreated datePublished" datetime="2018-11-25T17:40:45+08:00">2018-11-25</time>
+              <time title="Created: 2018-11-25 17:40:45 / Modified: 20:19:03" itemprop="dateCreated datePublished" datetime="2018-11-25T17:40:45+08:00">2018-11-25</time>
             
 
             
@@ -362,11 +362,11 @@
 <p>要求小于1000的能被3或5整除的数的和</p>
 <p>一种暴力的方法即是枚举每个数，假如能被3或5整除，就加入答案</p>
 <a id="more"></a>
-<p><a href="/ProjectEuler/code/T1.py"><code>代码</code></a></p>
+<a href="/ProjectEuler/T1/T1.py" title="T1.py">T1.py</a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1000</span>):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">3</span> == <span class="number">0</span> <span class="keyword">or</span> i % <span class="number">5</span> == <span class="number">0</span>:</span><br><span class="line">        ans += i</span><br><span class="line"><span class="keyword">print</span> ans</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Time:"</span>, time.time() - start</span><br></pre></td></tr></table></figure>
 <p>当然我们也可以考虑容斥</p>
 <p>算出3，5，15的倍数的和，然后输出<code>ans(3)+ans(5)-ans(15)</code>即可</p>
-<p><a href="/ProjectEuler/code/T1-2.py"><code>代码</code></a></p>
+<a href="/ProjectEuler/T1/T1-2.py" title="T1-2.py">T1-2.py</a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line">ans = ans + (<span class="number">1</span> + <span class="number">999</span> / <span class="number">3</span>) * (<span class="number">999</span> / <span class="number">3</span>) / <span class="number">2</span> * <span class="number">3</span></span><br><span class="line">ans = ans + (<span class="number">1</span> + <span class="number">999</span> / <span class="number">5</span>) * (<span class="number">999</span> / <span class="number">5</span>) / <span class="number">2</span> * <span class="number">5</span></span><br><span class="line">ans = ans - (<span class="number">1</span> + <span class="number">999</span> / <span class="number">15</span>) * (<span class="number">999</span> / <span class="number">15</span>) / <span class="number">2</span> * <span class="number">15</span></span><br><span class="line"><span class="keyword">print</span> ans</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Time: "</span>, time.time() - start</span><br></pre></td></tr></table></figure>
 
       
@@ -404,6 +404,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ProjectEuler/T2/" rel="prev" title="T2 Even Fibonacci numbers">
+                T2 Even Fibonacci numbers <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -477,7 +481,7 @@
                 
                   <a href="/ProjectEuler/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
