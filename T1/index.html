@@ -50,17 +50,17 @@
 
 
 
-<link href="/ProjectEuler/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/ProjectEuler/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/ProjectEuler/images/apple-touch-icon-next.png?v=6.2.0">
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
 
 
-  <link rel="mask-icon" href="/ProjectEuler/images/logo.svg?v=6.2.0" color="#222">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
 
 
 
@@ -73,7 +73,7 @@
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/ProjectEuler/',
+    root: '/',
     scheme: 'Pisces',
     version: '6.2.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -101,7 +101,7 @@
   <meta name="description" content="T1 Multiples of 3 and 5 Solution 要求小于1000的能被3或5整除的数的和 一种暴力的方法即是枚举每个数，假如能被3或5整除，就加入答案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="T1 Multiples of 3 and 5">
-<meta property="og:url" content="http://x.phoenixgs.cn/ProjectEuler/T1/index.html">
+<meta property="og:url" content="http://pe.phoenixgs.cn/T1/index.html">
 <meta property="og:site_name" content="ProjectEuler">
 <meta property="og:description" content="T1 Multiples of 3 and 5 Solution 要求小于1000的能被3或5整除的数的和 一种暴力的方法即是枚举每个数，假如能被3或5整除，就加入答案">
 <meta property="og:locale" content="zh-Hans">
@@ -115,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://x.phoenixgs.cn/ProjectEuler/T1/"/>
+  <link rel="canonical" href="http://pe.phoenixgs.cn/T1/"/>
 
 
 
@@ -181,7 +181,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/ProjectEuler/" class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">ProjectEuler</span>
         <span class="logo-line-after"><i></i></span>
@@ -213,7 +213,7 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/ProjectEuler/" rel="section">
+    <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
         
@@ -221,7 +221,7 @@
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/ProjectEuler/archives/" rel="section">
+    <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
   </li>
 
@@ -273,12 +273,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://x.phoenixgs.cn/ProjectEuler/ProjectEuler/T1/">
+    <link itemprop="mainEntityOfPage" href="http://pe.phoenixgs.cn/T1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PhoenixGS">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/ProjectEuler/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -358,11 +358,11 @@
 <p>要求小于1000的能被3或5整除的数的和</p>
 <p>一种暴力的方法即是枚举每个数，假如能被3或5整除，就加入答案</p>
 <a id="more"></a>
-<a href="/ProjectEuler/T1/T1.py" title="T1.py">T1.py</a>
+<a href="/T1/T1.py" title="T1.py">T1.py</a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1000</span>):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">3</span> == <span class="number">0</span> <span class="keyword">or</span> i % <span class="number">5</span> == <span class="number">0</span>:</span><br><span class="line">        ans += i</span><br><span class="line"><span class="keyword">print</span> ans</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Time:"</span>, time.time() - start</span><br></pre></td></tr></table></figure>
 <p>当然我们也可以考虑容斥</p>
 <p>算出3，5，15的倍数的和，然后输出<code>ans(3)+ans(5)-ans(15)</code>即可</p>
-<a href="/ProjectEuler/T1/T1-2.py" title="T1-2.py">T1-2.py</a>
+<a href="/T1/T1-2.py" title="T1-2.py">T1-2.py</a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line">ans = ans + (<span class="number">1</span> + <span class="number">999</span> / <span class="number">3</span>) * (<span class="number">999</span> / <span class="number">3</span>) / <span class="number">2</span> * <span class="number">3</span></span><br><span class="line">ans = ans + (<span class="number">1</span> + <span class="number">999</span> / <span class="number">5</span>) * (<span class="number">999</span> / <span class="number">5</span>) / <span class="number">2</span> * <span class="number">5</span></span><br><span class="line">ans = ans - (<span class="number">1</span> + <span class="number">999</span> / <span class="number">15</span>) * (<span class="number">999</span> / <span class="number">15</span>) / <span class="number">2</span> * <span class="number">15</span></span><br><span class="line"><span class="keyword">print</span> ans</span><br><span class="line"><span class="keyword">print</span> <span class="string">"Time: "</span>, time.time() - start</span><br></pre></td></tr></table></figure>
 
       
@@ -391,7 +391,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ProjectEuler/Hello-World/" rel="next" title="Hello World">
+              <a href="/Hello-World/" rel="next" title="Hello World">
                 <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
@@ -401,7 +401,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ProjectEuler/T2/" rel="prev" title="T2 Even Fibonacci numbers">
+              <a href="/T2/" rel="prev" title="T2 Even Fibonacci numbers">
                 T2 Even Fibonacci numbers <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -475,7 +475,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/ProjectEuler/archives/">
+                  <a href="/archives/">
                 
                     <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
@@ -623,49 +623,49 @@
 
   
   
-    <script type="text/javascript" src="/ProjectEuler/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/ProjectEuler/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/ProjectEuler/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/ProjectEuler/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/ProjectEuler/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/ProjectEuler/js/src/affix.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/ProjectEuler/js/src/schemes/pisces.js?v=6.2.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/ProjectEuler/js/src/scrollspy.js?v=6.2.0"></script>
-<script type="text/javascript" src="/ProjectEuler/js/src/post-details.js?v=6.2.0"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/ProjectEuler/js/src/bootstrap.js?v=6.2.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
 
 
 
